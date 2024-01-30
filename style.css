@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+}
+
+main {
+  width: 100%;
+}
+
+.main-card {
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+  max-width: 700px;
+  margin-inline: auto;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.img-card {
+  height: 260px;
+  background: url("images/image-product-mobile.jpg") center/cover;
+  background-repeat: no-repeat;
+}
+
+.content-card {
+  padding: 1.3em;
+}
+
+span,
+p {
+  color: hsl(228, 12%, 48%);
+}
+
+.content-card > .wrapper > span {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+}
+
+.content-card > .wrapper > h1 {
+  font-size: 2rem;
+  font-family: "Fraunces", serif;
+  margin-block: 0.4em;
+  color: hsl(212, 21%, 14%);
+}
+
+.content-card > .wrapper > p:first-of-type {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 1.8em;
+}
+
+.price-flex {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.price {
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.price-flex > span {
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding-block: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 700px) {
+  .main-card {
+    flex-direction: row;
+  }
+
+  .img-card {
+    width: 50%;
+    height: auto;
+    background: url("images/image-product-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .content-card {
+    width: 50%;
+    padding: 2.5em 2.5em 2.5em 2em;
+  }
+
+  .content-card > .wrapper > h1 {
+    margin-block: 0.7em;
+    width: 80%;
+  }
+
+  .content-card > .wrapper > p:first-of-type {
+    width: 90%;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .price-flex {
+    margin-bottom: 2em;
+  }
+}
